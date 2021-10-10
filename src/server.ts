@@ -7,7 +7,7 @@ const app: Application = express()
 app.use(urlencoded())
 app.use(json())
 app.use(cors())
-const port = 4000 || process.env.PORT
+const port = process.env.PORT || 4000
 import deployment from './api/routes/deployment.route'
 mongoose.connect(`mongodb+srv://Jeet:${process.env.DB_PASSWORD}@freecluster.ehj5s.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
