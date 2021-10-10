@@ -9,7 +9,7 @@ app.use(json())
 app.use(cors())
 const port = 4000 || process.env.PORT
 import deployment from './api/routes/deployment.route'
-mongoose.connect(`mongodb+srv://Jeet:Jeet@1991@freecluster.ehj5s.mongodb.net/ejam-test?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://Jeet:${process.env.DB_PASSWORD}@freecluster.ehj5s.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
